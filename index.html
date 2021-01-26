@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="acc.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+   
+    <title>Earned value</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Project management software</h1>
+      <div class="row">
+        <div class="col-sm-4">
+           <!-- Earned value -->
+      <h4>Earned Value</h4>
+      <input type="text" value="EV"><input type="text" placeholder="200" id="ev" /><br />
+      <input type="text" value="PV"><input type="text" placeholder="210" id="pv" /><br />
+      <input type="text" value="AC"><input type="text" placeholder="250" id="ac" /><br /><br>
+      <button type="button" class="btn btn-info btn-sm">SV</button
+      ><input type="text" id="sv" /><br />
+      <div id="status1"></div>
+      <br />
+      <button class="btn btn-info btn-sm">CV</button><input type="text" id="cv" /><br />
+      <div id="status2"></div>
+      <br />
+      <button class="btn btn-info btn-sm">SPI</button><input type="text" id="spi" /><br /><br />
+      <button class="btn btn-info btn-sm">CPI</button><input type="text" id="cpi" /><br /><br />
+      <button class="btn btn-info btn-sm">EAC</button><input type="text" id="eac" /><br /><br />
+      Project variance: <variance:h4 id="variance"></variance:h4>
+        </div>
+        <div class="col-sm-4" >
+          <!-- net present value -->
+      <h4>Net present value</h4>
+      <input type="text" value="Outflow"><input type="text" placeholder="10000" id="investment" />
+      <br /><br />
+      <input type="text" value="PV"><input type="text" value="" id="final" />
+      <br /><br />
+      <input type="text" value="Interest"><input type="text" placeholder="0.12" id="interest" /><br /><br />
+     <input type="text"  id="hide" ><input value="Cash flow" /><input value="Interest" /><input
+        value="PV"
+      /><br />
+      <input type="text" value="Year1"><input type="text" id="cash1" placeholder="2000" /><input
+        type="text"
+        id="int1"
+      /><input type="text" id="pre1" /><br />
+     <input type="text" value="Year2"><input type="text" id="cash2" placeholder="2100" /><input
+        type="text"
+        id="int2"
+      /><input type="text" id="pre2" /><br />
+      <input type="text" value="Year3"><input type="text" id="cash3" placeholder="2200" /><input
+        type="text"
+        id="int3"
+      /><input type="text" id="pre3" /><br />
+      <input type="text" value="Year4"><input type="text" id="cash4" placeholder="2300" /><input
+        type="text"
+        id="int4"
+      /><input type="text" id="pre4" /><br />
+      <input type="text" value="Year5"><input type="text" id="cash5" placeholder="2400" /><input
+        type="text"
+        id="int5"
+      /><input type="text" id="pre5" /><br />
+      <input type="text" value="Year6"><input type="text" id="cash6" placeholder="2500" /><input
+        type="text"
+        id="int6"
+      /><input type="text" id="pre6" /><br /><br />
+      <button class="btn btn-info btn-sm" id="npv">NPV</button><input type="text" id="answerNpv" /><button class="btn btn-info btn-sm" >PI</button><input type="text" id="Pi" placeholder="PI">
+        </div>
+        <div class="col-sm-4" >
+          <h4>Internal Rate of return</h4>
+          <input type="text" value="Lowest %"><input type="text" id="lowInt" placeholder='0.15'> <br> <br>
+          <input type="text" value="NPV"><input type="text" id="npv1" placeholder='200'> <br><br>
+          <input type="text" value="Highest %"><input type="text" id="highInt" placeholder='0.20'> <br> <br>
+          <input type="text" value="NPV"><input type="text" id="npv2" placeholder='50'> <br> <br>
+          <button class='btn btn-info btn-sm'id="irr">IRR</button> <input type="text" id="irrAns"><br><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4" >
+          <!-- payback -->
+      <h4>Pay back</h4>
+      <h5>Initial investment</h4>
+      <input type="text" id="capital" value="10000" />
+      <h5>Cashflows</h5>
+      <input type="text" value="Year1"><input type="text" id="cf1" value="0" /><br /><br />
+      <input type="text" value="Year2"><input type="text" id="cf2" value="0" /><br /><br />
+      <input type="text" value="Year3"><input type="text" id="cf3" value="0" /><br /><br />
+      <input type="text" value="Year4"><input type="text" id="cf4" value="0" /><br /><br />
+      <input type="text" value="Year5"><input type="text" id="cf5" value="0" /><br /><br />
+      <input type="text" value="Year6"><input type="text" id="cf6" value="0" /> <br /><br />
+      <button class="btn btn-info btn-sm"id="btnAns">Pay back</button>
+      <h4 id="answer"></h4>
+        </div>
+        <div class="col-sm-4">
+          <h4>Return on investment</h4>
+          Initial investment: <input type="text" id="outflow"value='5000' ><br><br>
+          Number of years: <input type="text" id="numOfYrs" placeholder='4' ><br><br>
+          <input type="text" value="Year1"><input type="text" id="year1" placeholder='0'><br><br>
+          <input type="text" value="Year2"><input type="text" id="year2"value='0' ><br><br>
+          <input type="text" value="Year3"><input type="text" id="year3" value='0' ><br><br>
+          <input type="text" value="Year4"><input type="text" id="year4" value='0'><br><br>
+          <input type="text" value="Year5"><input type="text" id="year5" value='0'><br><br>
+          <input type="text" value="Year1"><input type="text" id="year6" value='0'><br><br><br>
+          <button  class='btn btn-info btn-sm' id="btnRoi">ROI</button><input type="text" id="roiAns"> <button  class='btn btn-info btn-sm'>ARR</button><input type="text" id="arr">
+        </div>
+        <div class="col-sm-4">
+          <h4>Time value of money</h4>
+          <input type="text" value="FV"><input type="text" id="fvalue" ><br><br>
+          <input type="text" value="PV"><input type="text" id="pvalue"  ><br><br>
+          <input type="text" value="I/YR"><input type="text" id="per" ><br><br>
+          <input type="text" value="N"><input type="text" id="n" ><br><br>
+          <input type="text" value="Compounds"><input type="text" id="compound" value='1'><br><br>
+          <button  class='btn btn-info btn-sm' id="calculate">Calculate</button>
+        </div>
+      </div>
+    </div>
+    
+    
+    </div>
+    <script src="acc.js"></script>
+  </body>
+</html>
