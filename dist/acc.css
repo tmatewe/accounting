@@ -1,0 +1,36 @@
+input {
+  max-width: 80px;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  border: 2px solid skyblue;
+}
+
+h4 {
+  color: red;
+}
+
+.col-sm-4 {
+  border: 2px solid skyblue;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  padding: 10px;
+}
+
+.col-sm-6 {
+  border: 2px solid skyblue;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  padding: 10px;
+}
+#hide {
+  border: 2px solid white;
+}
